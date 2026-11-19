@@ -12,7 +12,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Fylo data storage component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -28,15 +33,17 @@
   </style>
 </head>
 
-<body>
+<body class="d-flex flex-column justify-content-center align-items-center invh-100 p-3">
   <main class="brand-logo">
     <img src="./images/logo.svg" alt="Fylo logo">
+    <div></div>
     <div>You've used 815 GB of your storage</div>
 
-    <div>185 GB Left</div>
-
-    <div>0 GB</div>
-    <div>1000 GB</div>
+    <div class="storage-status">
+      <div>185 GB Left</div>
+      <div>0 GB</div>
+      <div>1000 GB</div>
+    </div>
   </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
