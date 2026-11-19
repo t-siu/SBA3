@@ -35,32 +35,45 @@
 
 <body class="d-flex flex-column justify-content-center align-items-center min-vh-100 p-3">
   <main class="container">
+    <div class="row g-4 align-items-md-end justify-content-center">
 
-    <!-- Logo & Action Icons -->
-    <div>
-      <img src="./images/logo.svg" alt="Fylo logo">
+      <!-- Logo & Action Icons -->
+      <div class="col-12 col-md-4">
+        <div class="brand-logo p-4 rounded-3">
+          <img src="./images/logo.svg" alt="Fylo logo" class="mb-4">
 
-      <div>
-        <button type="button" aria-label="New document">
-          <img src="./images/icon-document.svg" alt=" New document">
-        </button>
-        <button type="button" aria-label="New folder">
-          <img src="./images/icon-folder.svg" alt=" New folder">
-        </button>
-        <button type="button" aria-label="Upload file">
-          <img src="./images/icon-upload.svg" alt="Upload file">
-        </button>
+          <div class="d-flex gap-3">
+            <button type="button" class="btn icon-btn p-2 rounded-3" aria-label="New document">
+              <img src="./images/icon-document.svg" alt=" New document">
+            </button>
+            <button type="button" class="btn icon-btn p-2 rounded-3" aria-label="New folder">
+              <img src="./images/icon-folder.svg" alt=" New folder">
+            </button>
+            <button type="button" class="btn icon-btn p-2 rounded-3" aria-label="Upload file">
+              <img src="./images/icon-upload.svg" alt="Upload file">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Storage Information -->
+      <div class="col-12 col-md-8">
+        <div class="storage-status p-4 rounded-3">
+          <p class="mb-3">You've used <strong>815 GB</strong> of your storage</p>
+
+          <!-- Amount of Storage left -->
+          <div class="left-box bg-white text-dark px-4 py-2 rounded-3 mt-3 d-inline-block">
+            <strong class="fs-2">185</strong>
+            <span class="small fw-bold text-secondary">GB Left</span>
+          </div>
+
+          <div class="d-flex justify-content-between small fw-bold mb-3">
+            <span>0 GB</span>
+            <span>1000 GB</span>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Storage Information -->
-    <div>You've used 815 GB of your storage</div>
-    <div class="storage-status">
-      <div>185 GB Left</div>
-      <div>0 GB</div>
-      <div>1000 GB</div>
-    </div>
-
 
   </main>
   <footer class="attribution">
