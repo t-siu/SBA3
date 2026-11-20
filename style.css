@@ -8,3 +8,13 @@ body {
     color: hsl(243, 100%, 93%);
 }
 
+
+
+
+@media (min-width: 768px) {
+    body {
+        background-image: url('./images/bg-desktop.png');
+        background-position: bottom center;
+        background-size: 100% 50%;
+    }
+}
