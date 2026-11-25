@@ -1,20 +1,84 @@
+/* Mobile background */
+
 body {
-    background-image: url("./images/bg-desktop.png");
-    background-color: hsl(229, 57%, 11%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    color: hsl(243, 100%, 93%);
+  background-image: url("./images/bg-mobile.png");
+  background-color: hsl(229, 57%, 11%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: hsl(243, 100%, 93%);
 }
 
+/* Desktop background */
+@media (min-width: 768px) {
+  body {
+    background-image: url("./images/bg-desktop.png");
+    background-position: bottom center;
+    background-size: 100% 50%;
+  }
+}
 
+/* Background fill for logo and storage status */
+.brand-logo,
+.storage-status {
+  background-color: hsl(228, 56%, 26%);
+}
 
+.brand-logo {
+  border-top-right-radius: 100px !important;
+}
+
+/* Storage bar outter fill */
+.storage-bar {
+  height: 20px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 999px;
+  padding: 3px;
+}
+
+/* gradient inner bar */
+.storage-bar-fill {
+  background: linear-gradient(
+    90deg,
+    hsl(6, 100%, 80%) 0%,
+    hsl(335, 100%, 65%) 100%
+  );
+  border-radius: 999px;
+  position: relative;
+  transition: width 0.6s ease;
+}
+
+/* white circle at the tip of the bar */
+.storage-bar-fill::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
 
 @media (min-width: 768px) {
-    body {
-        background-image: url('./images/bg-desktop.png');
-        background-position: bottom center;
-        background-size: 100% 50%;
-    }
+  .left-box {
+    position: absolute;
+    top: -36px;
+    right: 24px;
+    margin-top: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    overflow: visible !important;
+  }
+  .left-box::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -18px;
+    width: 0;
+    height: 0;
+    border-top: 18px solid white;
+    border-left: 18px solid transparent;
+  }
 }
